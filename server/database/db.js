@@ -1,8 +1,16 @@
-import mongoose, { Error } from "mongoose";
+import mongoose from "mongoose";
+import dotenv from "dotenv"
+
+dotenv.config();
+
+const USERNAME = process.env.DB_USERNAME;
+const PASSWORD = process.env.DB_PASSWORD;
+
 
 const Connection = () => {
 
-const MONGODB_URL = 'mongodb+srv://rak100:ahmad123@cluster0.p5hbnxy.mongodb.net/?retryWrites=true&w=majority';
+const MONGODB_URL =
+  `mongodb+srv://${USERNAME}:${PASSWORD}@cluster0.p5hbnxy.mongodb.net/?retryWrites=true&w=majority`;
 
     mongoose.connect(MONGODB_URL, { useNewUrlParser: true });
 
