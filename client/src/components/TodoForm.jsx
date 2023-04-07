@@ -12,6 +12,8 @@ const onFormSubmit = (e) =>{
   e.preventDefault();
    dispatch(addTodo(text));
 
+   setText("");
+
 }
    const onInputChange = (e) =>{
     setText(e.target.value);
@@ -20,7 +22,10 @@ const onFormSubmit = (e) =>{
     <form onSubmit={onFormSubmit}>
       <input className="task_input"
         placeholder="Enter your task here"
-        onChange={onInputChange} />
+        onChange={onInputChange} 
+        value={text}
+        />
+      
     </form>
   );
 };
