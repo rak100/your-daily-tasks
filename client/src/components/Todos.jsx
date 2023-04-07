@@ -5,13 +5,12 @@ import { useDispatch } from "react-redux";
 
 
 export const Todos = () => {
+
     const dispatch = useDispatch();
-  
-    useEffect(()=> {
-        dispatch(getAllTodos());
-    }, [])
 
-
+    useEffect(() => {
+      dispatch(getAllTodos());
+    }, [ dispatch]);
 
 
     return (
