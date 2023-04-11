@@ -26,7 +26,13 @@ const onFormSubmit = (e) =>{
         value={text}
         />
       
+
+
+
+
     </form>
+
+   
   );
 };
 export default TodoForm;
